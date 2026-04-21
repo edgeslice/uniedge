@@ -1,0 +1,7 @@
+[build]
+target = "aarch64-unknown-none-softfloat"
+
+[target.aarch64-unknown-none-softfloat]
+linker = "rust-lld"
+runner = "scripts/run-qemu.sh"
+rustflags = ["-Clink-arg=-Tlinker.ld"]
